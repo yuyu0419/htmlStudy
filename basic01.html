@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        div.a {
+            border: 1px solid #000000;
+            width: 500px;
+            margin-left: 30px;
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        div.b {
+            border: 1px solid #267215;
+            width: 400px;
+            margin-left: 30px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        div.b p {
+            color: #436987;
+            text-align: right;
+            font-size: 10px;
+        }
+
+        div.b h1 {
+            font-size: 30px;
+        }
+
+        div.a p {
+            color: #999;
+        }
+
+        div.a h1 {
+            font-size: 30px;
+        }
+    </style>
+
+
+    <div class="a">
+        <h1>HTML</h1>
+        <p>
+            html tag 기초 학습
+        </p>
+    </div>
+
+
+    <div class="b">
+        <h1>HTML</h1>
+        <p>
+            html tag 기초 학습
+        </p>
+    </div>
+
+    <hr>
+
+    <!--inline요소-->
+    <style>
+        div.box {
+            width: 340px;
+            border: 1px solid #f00;
+            font-size: 0;
+            margin: 0;
+            /*left,right,top,bottom*/
+            margin: 0 auto;
+            /*top&bottom, left&right*/
+            /*margin-left:auto;
+              margin-right:auto;*/
+        }
+
+        div.box img {
+            width: 100px;
+            margin-right: 20px;
+        }
+
+        div.box .last {
+            margin-right: 0;
+        }
+    </style>
+
+    <div class="box">
+        <a href="http://naver.com" target="_blank">
+            <img src="img/a1.jpg" alt="나뭇잎" title="이건 말풍선, 요즘은 잘사용x 타사의 컨텐츠에만 사용">
+        </a>
+        <img src="img/a1.jpg" alt="나뭇잎" title="이건 말풍선, 요즘은 잘사용x 타사의 컨텐츠에만 사용">
+        <img src="img/a1.jpg" alt="나뭇잎" title="이건 말풍선, 요즘은 잘사용x 타사의 컨텐츠에만 사용" class="last">
+    </div>
+    <hr>
+    <!--block or inline 차이점-->
+    <style>
+        .block_inline {}
+
+        .block_inline p {
+            width: 100px;
+            height: 100px;
+            background: #ff0;
+            border: 1px solid #f00;
+            margin: 100px;
+        }
+
+        .block_inline span {
+            width: 100px;
+            height: 100px;
+            background: #ff0;
+            border: 1px solid #f00;
+            margin: 100px;
+            display: inline-block
+        }
+    </style>
+
+
+    <div class="block_inline">
+        <p>block</p>
+        <span>inline<br></span>
+        <span>inline<br></span>
+
+    </div>
+
+
+
+
+    <!--    
+    *tag display
+    -block(모든 스타일 명령 제약 없음)
+    -inline(스타일 명령 제약 있음 width, height, margin, padding)
+    -inline-block(스타일 명령 제약이 있을때 사용) 
+    -flex
+    -grid
+    -table 
+    
+    *block
+    <div></div>
+    <h></h>    
+    <p></p> 
+    <ul></ul>
+    <dl></dl>
+    <table></table>
+    <form></form>  
+    .
+    .
+    
+
+   *inlin요소
+    <span></span>
+    <em></em>
+    <small></small>
+    <code></code>
+    <a></a>
+    <strong></strong>
+    <b></b>
+    <img>
+    <table></table>
+    <form></form>
+    .
+    .
+    
+    -->
+</body></html>

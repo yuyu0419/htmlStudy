@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--    목록, 리스트(UL,LI,OL,DL,DT,DD)-->
+    <style>
+        .list_gallery {}
+
+        .list_gallery h1 {
+            text-align: center;
+            border-bottom: 1px solid #000;
+            padding-bottom: 10px;
+
+            /*padding은 마진이랑 사용하는 방법이 똑같다
+            padding:0;
+            padding:0 0;
+            padding:0 0 0 0 ;(12,3,6,9)*/
+        }
+
+        .list_gallery ul {
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+        }
+
+        .list_gallery ul li {
+            list-style-type: none;
+            width: 30%;
+            display: inline-block;
+            margin: 40px 5% 30px 0;
+        }
+
+        .list_gallery ul li img {
+            width: 100%
+        }
+
+        .list_gallery ul li:nth-of-type(3n) {
+            margin-right: 0;
+        }
+
+        .paging {
+            text-align: center;
+            margin: 0 0 100px;
+        }
+
+        .paging a {
+            color: #555;
+            text-decoration: none;
+            border: 1px solid #ddd;
+            /*        width:30px;*/
+            /*        height:30px;(숫자마다 크기가 다르니까 패딩이용)*/
+            padding: 5px 10px;
+            display: inline-block;
+        }
+
+        .paging a:hover {
+            /*            color:#f00;*/
+            font-weight: bold;
+            background: #f5f5f5;
+
+        }
+    </style>
+
+    <div class="list_gallery">
+        <h1>img gallery
+        </h1>
+
+        <ul>
+            <li>
+                <img src="img/a2.jpg" alt="">
+            </li>
+
+            <li>
+                <img src="img/a2.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/a2.jpg" alt="">
+            </li>
+
+            <li>
+                <img src="img/a2.jpg" alt="">
+            </li>
+
+            <li>
+                <img src="img/a2.jpg" alt="">
+            </li>
+            <li>
+                <img src="img/a2.jpg" alt="">
+            </li>
+
+        </ul>
+        <div class="paging">
+            <a href="#">&lt</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">&gt</a>
+
+        </div>
+    </div>
+
+   
+    <!--    하나의 스타일 안에 다 입력해도 됨. 밑에꺼는 참고용으로 나눔-->
+    <style>
+        .faq {
+            margin-bottom: 100px;
+        }
+
+        .faq ul {
+            list-style-position: inside;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        /* list-style-image:url('') 아이콘같이 작은거*/
+
+
+        .faq ul li {
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+            background-image: url('p02-01-17.jpg');
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+
+        /*background-position:left or right top, center or bottom;*/
+        /*     
+        background: color image position repeat/(size)  
+        위의 코드 4가지를 컬러, 이미지, 위치, 반복을 순서대로 하면 코드 하나로 끝난다
+        인터넷 익스플로어는 사이즈를 인식하지 않기 때문에 따로 써준다
+        */
+        .faq ul li p {
+            display: none;
+        }
+
+        .faq ul li:hover p {
+            display: block;
+        }
+    </style>
+
+
+    <div class="faq">
+        <h2>FQA</h2>
+        <ul>
+            <li>block 요소가 뭔가요?
+                <p>가로 100%, 줄바꿈, 세로형태조절</p>
+            </li>
+
+        </ul>
+        <ul>
+            <li>inline 요소가 뭔가요?
+                <p>컨텐츠 크기만큼 가로사이즈 설정, 스타일 제약있음, 가로형태 정렬방식</p>
+            </li>
+
+        </ul>
+    </div>
+
+
+</body></html>
