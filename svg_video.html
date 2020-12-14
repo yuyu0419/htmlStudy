@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        svg {
+            width: 40%;
+            height: 100vh;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            z-index: 1;
+        }
+
+        svg rect {
+            fill: #fff;
+            width: 100%;
+            height: 100%;
+        }
+
+        svg text {
+            text-anchor: middle;
+            font-size: 200px;
+            font-weight: bold;
+            /*            start, end, middle 3가지 정렬방식*/
+        }
+
+/*         video{clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);}*/
+    </style>
+
+
+    <svg>
+        <defs>
+            <mask id="vdo">
+                <rect x=0 y=0 />
+                <text x="45%" y="50%" font-size="200">
+                    VIDEO
+                </text>
+            </mask>
+        </defs>
+        <rect mask="url(#vdo)" x=0 y=0 />
+    </svg>
+    
+    
+    
+    <div class="css_vdo">
+        <video autoplay loop muted>
+            <source src="img/nature.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        .css_vdo {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .css_vdo video {
+            height: 100vh;
+        }
+    </style>
+
+
+
+
+</body></html>
