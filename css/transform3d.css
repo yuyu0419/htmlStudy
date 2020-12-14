@@ -1,0 +1,193 @@
+@import url(common.css);
+
+html,
+body {
+    background: none;
+    height: 100%;
+}
+
+article {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+article h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+
+
+/*.t3d_1*/
+.t3d_1 {}
+
+.t3d_1 div {
+    width: 400px;
+    height: 700px;
+    position: relative;
+    transform-style: preserve-3d;
+    /*
+    transform:perspective(900px) rotateX(-60deg) rotateY(10deg);
+    */
+}
+
+.t3d_1 div p {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /*    opacity:.3;*/
+}
+
+.t3d_1 div p:nth-of-type(1) {
+    transform: rotateY(0deg) translateZ(-200px);
+    background: red;
+}
+
+.t3d_1 div p:nth-of-type(2) {
+    transform: rotateY(90deg)translateZ(-200px);
+    background: blue;
+}
+
+.t3d_1 div p:nth-of-type(3) {
+    transform: rotateY(180deg) translateZ(-200px);
+    background: green;
+}
+
+.t3d_1 div p:nth-of-type(4) {
+    transform: rotateY(270deg) translateZ(-200px);
+    background: yellow;
+}
+
+/*
+.t3d_1 div{transition:.5s;}
+.t3d_1 div:hover{
+    transform:perspective(800px)
+        rotateY(270deg);}*/
+
+
+/*animation*/
+.t3d_1 div {
+    animation: site 1.5s 1s linear infinite alternate;
+    /*
+    animation-name:site; 애니메이션 이름
+    animation-duration: 1.5s; 애니메이션 속도
+    animation-delay: 1s 1초 후에 애니메이션 시작
+    animation-timing-function: linear; 일정속도유지 시작~끝까지
+    animation-fill-mode:forwards; 0~100% 정지(infinite 또는 숫자도 입력가능하다)(alternate는 한바퀴도는것의 연속이 아닌 거꾸로 재생의 개념)
+    animation-direction: alternate;
+    100%에서 0%로 돌아갈때 애니메이션을 유지
+    animation-iteration-countinfinite;
+    애니메이션 반복ㅣ숫자를 이용할 수 있음
+    animation-delay: 1s;->1초 후 시작
+    animation-play-state: paused; 뭔가를 클릭하려고 할때 사용
+    paused(정지), running(실행)
+*/
+}
+
+.t3d_1 div.paused {
+    animation-play-state: paused;
+}
+/*.t3d_1 div.running{animation-play-state: running;}*/
+
+
+.btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@keyframes site {
+    50% {
+        transform:
+            rotateX(60deg) rotateY(180deg);
+    }
+
+    100% {
+        transform:
+            rotateX(0deg) rotateY(260deg);
+    }
+}
+
+
+/*animation의 이름과 키프레임의 이름이 같아야한다*/
+/*t3d_2------------*/
+.t3d_2 {
+    perspective: 3000px;
+}
+
+.t3d_2 div {
+    width: 700px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(-5deg);
+}
+
+.t3d_2 div p {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: .5s;
+}
+
+.t3d_2 div p:nth-of-type(1) {
+    background: red;
+    transform: rotateY(0) translateZ(350px);
+}
+
+.t3d_2 div p:nth-of-type(2) {
+    background: orange;
+    transform: rotateY(120deg) translateZ(350px);
+}
+
+.t3d_2 div p:nth-of-type(3) {
+    background: green;
+    transform: rotateY(240deg) translateZ(350px);
+}
+
+.t3d_2 div {
+    animation: ban 10s linear infinite;
+}
+
+@keyframes ban {
+    0%,
+    10% {
+        transform: rotateX(-5deg) rotateY(0deg)
+    }
+
+    30%,
+    40% {
+        transform: rotateX(-5deg) rotateY(120deg)
+    }
+
+    60%,
+    70% {
+        transform: rotateX(-5deg) rotateY(240deg)
+    }
+
+    100% {
+        transform: rotateX(-5deg) rotateY(360deg)
+    }
+}
+
+
+.t3d_2 div:hover p:nth-of-type(1) {
+    transform: rotateY(0deg) translateZ(200px);
+}
+
+.t3d_2 div:hover p:nth-of-type(2) {
+    transform: rotateY(120deg) translateZ(200px);
+}
+
+.t3d_2 div:hover p:nth-of-type(3) {
+    transform: rotateY(240deg) translateZ(200px);
+}

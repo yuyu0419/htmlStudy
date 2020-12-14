@@ -1,0 +1,76 @@
+@import url('common.css');
+
+.agr {
+    width: 700px;
+    margin: 150px auto;
+}
+
+.agr h1 {
+    text-align: center;
+}
+
+.agr dl {
+    border: 5px solid #000;
+    width: 800px;
+}
+
+.agr dl h2 {
+    text-align: center;
+    padding-top: 60px;
+}
+
+.agr dl div {
+    border: 1px solid #000;
+    margin: 50px 50px 30px 50px;
+    padding: 20px;
+}
+
+
+.agr dl div dt {
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.agr dl div dd {
+    margin-left: 0px;
+    padding: 20px 0px 20px 0;
+    font-size: 18px;
+    border-top: 1px solid #555;
+    position: relative;
+}
+
+.agr dl div dd:before {
+    content: url('form-icon.png');
+    padding: 10px;
+}
+
+.agr dl div dd:after {
+    content: '(필수)';
+    display: inline-block;
+    color: red;
+    font-weight: bold;
+    padding: 0;
+}
+
+.agr dl div dd:nth-of-type(3):after {
+    content: '(선택)';
+}
+
+
+.agr dl div dd input {
+    position: absolute;
+    right: 15px;
+
+}
+.agr dl p {
+    border: 1px solid #555;
+    width: 100px;
+    margin: 20px 300px 30px 300px;
+    padding: 10px;
+    background: #555;
+    text-align: center;
+}
+
+.agr dl p a {
+    color: #fff;
+}

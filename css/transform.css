@@ -1,0 +1,125 @@
+@import url(common.css);
+
+html, body{background:none;
+height:100%;}
+
+
+article{
+    width:100%; height:100%;
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+article h2{
+    text-align: center;
+    font-size: 2em; margin-bottom:50px;
+}
+article div{width:500px; margin:0 auto;}
+article div img{width:100%;}
+
+.t_1{}
+.t_1 div{overflow:"hidden";}
+.t_1 div img{transition:transform 2s 
+    linear, easy-in,opacity 1s 1s;}
+/*easy-in, ease-out, ease in-out, linear*/
+/*transform: hover transition:.2s; lin
+ear는 처음과 시작의 속도가 같다*/
+/*.t_1 div img{transition:.2s opacity 1s 1s는 1초에 연하게*/
+/*cubic-bezier.com*/
+.t_1 div:hover img{
+    transform: scale(2);
+    opacity:.5;
+}
+
+
+.t_2{}
+.t_2 div{
+    border:1px solid #000;
+}
+.t_2 div img{transition:.5s;
+transform-origin::80% 50%;}
+/*transform-origin의 기준점은 중앙이다*/
+
+
+.t_2 div:hover img{
+    transform: rotate(90deg);
+   }
+
+.t_3{}
+.t_3 div{
+    border:1px solid #000;
+    perspective: 600px;
+    background: #f654;
+}
+.t_3 div img{transition:.5s;}
+
+
+.t_3 div:hover img{
+    transform: rotateY(60deg) scale(.7);
+   }
+.t_3{background: #eee;
+transition:.5s;
+    transform-origin:left center;}
+.t_3:hover{
+        transform: perspective(3000px)
+    rotatex(10deg);
+}
+
+
+
+
+.t_4{}
+
+.t_4 h2{position:relative;
+font-size: 80px;}
+
+.t_4 h2:after{
+    content:'Transform(rotate and skew)';
+    position:absolute;
+    left:0; top:0;
+    color:rgba(0,0,0,0.4);
+
+    transform-origin: left bottom;
+    transform: 
+        translateX(-10px)
+        perspective(1000px)
+        skewX(-40deg) 
+        rotateX(-60deg);
+    
+    filter:blur(5px);
+}
+/*로테이드엑스 눕히기 트랜슬레이트는 현재 자신의 width 크기를 알고 있음
+*/
+.t_4 div{
+    border:3px solid #000;
+    
+}
+.t_4 div img{
+    border:1px solid #566;
+    transition:.5s;}
+
+
+.t_4 div:hover img{
+    transform: skew(30deg,30deg);   }
+/*왼쪽은 X지점 오른쪽은 Y지점*/
+
+
+
+
+
+
+
+.t_5 div{
+    border:3px solid #000;
+    
+}
+.t_5 div img{border:1px solid #555;
+      transition:.5s;}
+
+.t_5 div:hover img{
+    transform: translate(-3%,-3%);  
+box-shadow:10px 10px 10px rgba(0,0,0,0.4);
+}

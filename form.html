@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="css/form.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <form name="member" action="http://naver.com">
+        <fieldset class="member">
+            <legend>회원정보입력</legend>
+            <ul>
+                <li>
+                    <laber for="n">이름</laber>
+                    <input type="text" name="name" required placeholder="이름" id="n">
+                </li>
+
+                <li>
+                    <laber>패스워드</laber>
+                    <input type="password" name="name">
+                </li>
+                <li>
+                    <laber>성별</laber>
+                    남<input type="radio" name="m" checked>
+                    여<input type="radio" name="f">
+                </li>
+                <li>
+                    <laber>파일첨부</laber>
+                    <input type="file" name="upload">
+                </li>
+                <li>
+                    <laber>취미</laber>
+                    독서<input type="checkbox" name="h[]" value="read">
+                    낚시<input type="checkbox" name="h[]" value="fishing">
+                    운동<input type="checkbox" name="h[]" value="sports">
+                </li>
+                <li>
+                    <laber>내용</laber>
+                    <textarea cols="50" rows="10"></textarea>
+                </li>
+                <li>
+                    <laber>가입경로</laber>
+                    <select>
+                        <option>인터넷</option>
+                        <option>친구</option>
+                        <option>이벤트</option>
+                        <option>광고</option>
+                    </select>
+                </li>
+                <li>
+                    <input type="submit" value="저장">
+                </li>
+
+                <!--html5 form요소-->
+                <ul>
+                    <li>
+                        <label>색상</label>
+                        <input type="color" value="#000">
+                    </li>
+                    <li>
+                        <label>숫자</label>
+                        <input type="number" min="1" max="10" value="1">
+                    </li>
+                    <li>
+                        <label>날짜</label>
+                        <input type="date">
+                        <input type="time">
+                        <input type="datetime-local">
+                    </li>
+                    <li>
+                        <label>이메일</label>
+                        <input type="email">
+                    </li>
+                    <li>
+                        <label>검색</label>
+                        <input type="search">
+                    </li>
+                    <li>
+                        <label>전화</label>
+                        <input type="tel">
+                    </li>
+                    <li>
+                        <label>url</label>
+                        <input type="url">
+                    </li>
+                </ul>
+            </ul>
+        </fieldset>
+    </form>
+
+</body></html>
+
+<!--반드시 내용이 필요한 것들은 태그에 required를 써줘야한다.-->
+
+<!--checkbox는 이름값에 반드시 대괄호[]를 써줘야한다. checkbox는 동시에 여러개를 체크할 수 있고 radio는 하나만 가능하다. value값은 상단(주소) 경로에 뜨게 된다. radio와 checkbox는 value값을 꼭 넣어줘야 한다. 다른 것들은 사용자가 작성하여 넣기때문에 필요하지 않다.-->
+
+<!--form은 개발자가 쓰고싶지 않으면 버릴수도 있으므로 최상위 부모가 아님-->
+
+<!--<place holder에 라벨대신 주제를 입력해줄 수 있다 ex.이름-->
+
+<!-- 인풋의 required은 아무것도 입력하지 않았을때 입력창에 뭔가 입력하라고 뜬다-->
+
+<!--폼의 액션에 url을 써주면 내가 입력한 값을 그쪽으로 가지고 간다.-->
+
+<!--inpue은 인라인블럭 요소이고 타입과 네임말고도 속성이 더 있다. 타입과 네임은 반드시 넣어줘야하고 img처럼 닫기가 없다-->
+
+<!--사용자로부터 받고 싶은 정보(로그인 회원가입 상품등록 한줄 댓글쓰기 등)를 폼으로 만든다-->

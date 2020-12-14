@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+    </title>
+    <link href="css/video.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="vdo">
+        <video width="" height="" controls loop autoplay muted poster="시작전이미지">
+            <source src="img/nature.mp4" type="video/mp4">
+        </video>
+        <div class="btn">
+            <a>PLAY</a>
+        </div>
+    </div>
+
+    <script>
+        var vdo = document.querySelector('video');
+        const btn = document.querySelector('.btn a');
+        
+        btn.addEventListener('click', function() {
+            vdo.pause();
+            //vdo.play();  //
+        });
+    </script>
+</body></html>

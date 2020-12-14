@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="css/iframe.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <iframe width="560" height="315" src="/html/transform3d.html" frameborder="0" name="vdo" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <a href=https://www.youtube.com/embed/HX27K_j4zzg target="vdo">동영상</a>
+
+
+    <!--   map-->
+    <!-- * 카카오맵 - 지도퍼가기 -->
+    <!-- 1. 지도 노드 -->
+    <div id="daumRoughmapContainer1593075623632" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+    <!--
+	2. 설치 스크립트
+	* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+-->
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+    <!-- 3. 실행 스크립트 -->
+    <script charset="UTF-8">
+        new daum.roughmap.Lander({
+            "timestamp": "1593075623632",
+            "key": "yxm4",
+            "mapWidth": "640",
+            "mapHeight": "360"
+        }).render();
+    </script>
+
+
+    <!-- 마커가 표시될 위치입니다-->
+    <!--kakao map api-->
+
+    <div id="map" style="width:100%;height:350px;"></div>
+
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e91c49b5baf714d0ac18e682d2441f9a"></script>
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = {
+                center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+                level: 3 // 지도의 확대 레벨
+            };
+
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+        // 마커가 표시될 위치입니다 
+        var markerPosition = new kakao.maps.LatLng(33.450701, 126.570667);
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+
+        // 아래 코드는 지도 위의 마커를 제거하는 코드입니다
+        // marker.setMap(null);    
+    </script>
+
+
+    <!-- 마커가 표시될 위치입니다-->
+
+
+
+
+</body></html>
+
+
+<!--네임밑에 scrolling="scroll" 가능-->

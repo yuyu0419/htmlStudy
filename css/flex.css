@@ -1,0 +1,75 @@
+@import url('common.css');
+
+.flex_1 {
+    width: 1280px;
+    height: 1300px;
+    margin: 50px auto;
+    background: #555;
+}
+
+.flex_1 h2 {}
+
+.flex_1 ul {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    /*    justify-content: space-between;*/
+    /*    align-content: space-between;*/
+    border: 1px solid #000;
+    list-style: none;
+}
+
+/*li은 블럭요소이고 이미지는 인라인요소이다. li들을 가로 정렬하기 위해 display flex처리를 해준다 이때 flex처리를 해주면 이미지들이 실제 li가 가진 30%의 사이즈와 무관하게 한줄로 붙게 된다. 이를 막기위해 flex-wrap: wrap를해주면 li가 3개씩 가로로 정렬이 되는데 이때 30%*3를 제외한 10%가 남게 된다. 그때 justify-content: space-between을 해주면 li의 양쪽 끝쪽이 같은 비율로 가로 정렬이 된다. around는 li사이의 가로정렬의 빈공간들을 포함해서 같은 비율로 정렬된다.*/
+.flex_1 ul li {
+    width: 30%;
+}
+
+.flex_1 ul li img {
+    width: 100%;
+}
+
+
+/*==========flex_2============*/
+
+.flex_2 {
+    width: 90%;
+    height: 600px;
+    margin: 100px auto;
+}
+
+.flex_2 h2 {}
+
+.flex_2 div {
+    height: 100%;
+    border: 1px solid #000;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*flex-direction: column 기본값은 row. 원래 justify-content: center는 가로로 움직이는데 플렉스 디렉션 칼럼때문에 명령이 뒤바뀌었다. 그래서 얼라인을 반대로 써주면 된다*/
+
+.flex_2 div strong {
+    font-size: 5em;
+}
+
+.flex_2 div p {
+    color: #777;
+    padding: 20px 0 40px 0;
+}
+
+.flex_2 div a {
+    padding: 10px 30px;
+    border: 2px solid #555;
+    display: inline-block;
+}
+
+.flex_2 div a:hover {
+    background: #000;
+    border-radius: 10px;
+}

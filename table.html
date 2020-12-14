@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="css/table.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <table class="t_1">
+        <tr>
+            <th>번호</th>
+            <th>수강생명</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>김땡땡</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>박콩콩</td>
+        </tr>
+    </table>
+    <!--table 태그로 표만들 수 있다 
+    tr은 줄의 갯수를 의미한다.
+    th는 제목 기본값으로 텍스트 얼라인 센터 볼드
+    td는 내용   -->
+
+    <table class="t_2">
+        <!--
+       <colgroup>
+       <col width="200">
+       <col width="*">
+       <col width="300">
+        </colgroup>
+        제목들의 순서대로 정렬하는건데 브라우저의 종류에 따라 css보다 html이 우선시될 때가 있음. 이때의 혼동을 피하기 위해서 추천하는 방법은 아님 -->
+        <caption>테이블 제목</caption>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>날짜</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>
+                    <p>공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.공지사항입니다.
+                    </p>
+                </td>
+                <td>2020-06-17</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>자유게시판입니다.</td>
+                <td>2020-06-17</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table class="t_3" border="1">
+        <tr>
+            <td colspan="2">1,2</td>
+            <!--        <td>2</td> 1과 2번이 colspan에 의해 병합됨-->
+            <td rowspan="4">3,6,9,12</td>
+        </tr>
+        <tr>
+            <td colspan="2">4,5</td>
+            <!--
+        <td>5</td>
+        <td>6</td> colspan에는 몇개 병합하는지 갯수
+-->
+        </tr>
+        <tr>
+            <td rowspan="2">7</td>
+            <td>8</td>
+            <!--        <td>9</td>-->
+        </tr>
+        <!--   rowspan은 위아래 병합  -->
+        <tr>
+            <!--        <td>10</td>-->
+            <td>11</td>
+            <!--        <td>12</td>-->
+        </tr>
+        <!-- 달력 일정표 게시판 등에 종종 쓰임   -->
+    </table>
+
+
+
+</body></html>
